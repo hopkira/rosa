@@ -20,6 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+           'py_node = rosa_py_pkg.screen_node:main'
         ],
     },
 )

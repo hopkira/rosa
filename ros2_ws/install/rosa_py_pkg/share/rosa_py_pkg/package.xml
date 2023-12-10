@@ -5,7 +5,7 @@
   <version>0.0.0</version>
   <description>TODO: Package description</description>
   <maintainer email="hopkira@googlemail.com">hopkira</maintainer>
-  <license>The Unlicense</license>
+  <license>Apache License 2.0</license>
 
   <depend>rclpy</depend>
 
