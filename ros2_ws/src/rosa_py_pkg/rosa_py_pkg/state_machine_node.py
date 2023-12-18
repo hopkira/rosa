@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+import random
+
 import rclpy
 from rclpy.node import Node
 
@@ -16,10 +18,10 @@ class StateMachineNode(Node):
     def publish_state(self):
         # msg_string = "Hello " + str(self.counter_)
         msg = ScreenStatus()
-        msg.speed = 10
-        msg.colour.red = 255
-        msg.colour.green = 0
-        msg.colour.blue = 0
+        msg.speed = random.randint(-10, 10)
+        msg.colour.red = random.randint(0, 255)
+        msg.colour.green = random.randint(0, 255)
+        msg.colour.blue = random.randint(0, 255)
         self.publisher_.publish(msg)
 
 def main(args=None):
