@@ -2,13 +2,14 @@
 import rclpy
 from rclpy.node import Node
 
-from example_interfaces.msg import String
+# from example_interfaces.msg import String
+from rosa_interfaces.msg import ScreenStatus
  
 class ScreenNode(Node):
     def __init__(self):
         super().__init__("screen")
         self.subscriber_ = self.create_subscription(
-            String, "screen_state", self.callback_screen_state, 10)
+            ScreenStatus, "screen_state", self.callback_screen_state, 10)
         self.get_logger().info("Screen started")
 
     def callback_screen_state(self, msg):
