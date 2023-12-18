@@ -13,10 +13,8 @@ class ScreenNode(Node):
         self.get_logger().info("Screen started")
 
     def callback_screen_state(self, msg):
-        self.get_logger().info("Speed: ", msg.speed, 
-                               "Red: ", msg.colour.red, 
-                               "Blue: ", msg.colour.blue, 
-                               "Green: ", msg.colour.green)
+        text = "Speed: " + str(msg.speed) + "Red: " + str(msg.colour.red) + "Blue: " + str(msg.colour.blue) + "Green: " + str(msg.colour.green)
+        self.get_logger().info(text)
  
 def main(args=None):
     rclpy.init(args=args)
