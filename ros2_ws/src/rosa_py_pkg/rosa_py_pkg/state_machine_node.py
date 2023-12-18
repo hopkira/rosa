@@ -11,6 +11,7 @@ class StateMachineNode(Node):
         self.publisher_ = self.create_publisher(ScreenStatus, "screen_state", 10)
         self.get_logger().info("State Machine started")
         self.create_timer(1.0, self.publish_state)
+        self.get_logger().info("Staltus publisher started")
 
     def publish_state(self):
         # msg_string = "Hello " + str(self.counter_)
