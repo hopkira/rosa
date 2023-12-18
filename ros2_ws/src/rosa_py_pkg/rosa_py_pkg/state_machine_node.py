@@ -9,7 +9,6 @@ class StateMachineNode(Node):
     def __init__(self):
         super().__init__("state_machine")
         self.publisher_ = self.create_publisher(ScreenStatus, "screen_state", 10)
-        self.counter_ = 0
         self.get_logger().info("State Machine started")
         self.create_timer(1.0, self.publish_state)
 
@@ -19,7 +18,7 @@ class StateMachineNode(Node):
         msg.speed = 10
         msg.colour.red = 255
         msg.colour.green = 0
-        msg.colur.blue = 0
+        msg.colour.blue = 0
         self.publisher_.publish(msg)
 
 def main(args=None):
